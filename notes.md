@@ -21,10 +21,10 @@ COMMANDS:
 MAVEN BUILD CYCLE: 
 
     mvn validate        validate project is correct and all information is available.
-    mvn compile         compile the source code
+    mvn compile         compile the source code. In target, create the app.class file
     mvn test            execute the unit test in test directory.
-    mvn package         jar/war file will be created.
-    mvn install         install package code into local maven repository.
+    mvn package         jar/war file will be created. SNAPSHOT.jar image is created. 
+    mvn install         install package code into local m2 maven repository. 
     mvn deploy          deploy to remote repository
 
     mvn clean           clean project working directory.
@@ -37,8 +37,4 @@ POM.XML FILE:
     It contains configuration details.
     All dependancies and support plugins defined.
     
-
-
-
-
-
+---------------------------------------------------------------------------------------------------------
