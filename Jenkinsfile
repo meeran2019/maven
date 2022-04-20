@@ -16,7 +16,8 @@ mvn clean compile'''
 
     stage('test') {
       steps {
-        sh 'mvn test'
+        sh '''cd my-app
+mvn test'''
       }
     }
 
