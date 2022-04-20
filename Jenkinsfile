@@ -44,5 +44,12 @@ mvn clean install'''
       }
     }
 
+    stage('display-ws') {
+      steps {
+        sh '''echo $WORKSPACE
+ls '''
+      }
+    }
+
   }
 }
