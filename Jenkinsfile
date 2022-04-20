@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('jenkinsfile') {
       steps {
-        dir(path: 'my-app')
+        sh 'echo $WORKSPACE'
       }
     }
 
