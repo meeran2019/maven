@@ -10,7 +10,7 @@ pipeline {
     stage('build') {
       steps {
         sh '''cd my-app
-mvn clean build'''
+mvn clean compile'''
       }
     }
 
