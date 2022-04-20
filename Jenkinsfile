@@ -23,7 +23,7 @@ mvn test'''
 
     stage('test-archive') {
       steps {
-        archiveArtifacts '*.jar'
+        archiveArtifacts '*'
       }
     }
 
