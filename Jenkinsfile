@@ -38,5 +38,11 @@ mvn clean install'''
       }
     }
 
+    stage('unstash') {
+      steps {
+        unstash 'stash-file'
+      }
+    }
+
   }
 }
