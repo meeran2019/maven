@@ -23,7 +23,7 @@ mvn clean install'''
 
     stage('test-archive') {
       steps {
-        archiveArtifacts '**'
+        archiveArtifacts '**/target/*.jar'
       }
     }
 
