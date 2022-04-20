@@ -15,9 +15,20 @@ mvn clean compile'''
     }
 
     stage('test') {
-      steps {
-        sh '''cd my-app
+      parallel {
+        stage('test') {
+          steps {
+            sh '''cd my-app
 mvn clean install'''
+          }
+        }
+
+        stage('stash-stage') {
+          steps {
+            stash(name: 'stash-file', allowEmpty: true)
+          }
+        }
+
       }
     }
 
