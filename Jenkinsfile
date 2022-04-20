@@ -10,7 +10,19 @@ pipeline {
     stage('build') {
       steps {
         sh '''cd my-app
-mvn clean install'''
+mvn clean build'''
+      }
+    }
+
+    stage('test') {
+      steps {
+        sh 'mvn test'
+      }
+    }
+
+    stage('test-archive') {
+      steps {
+        archiveArtifacts '*.jar'
       }
     }
 
