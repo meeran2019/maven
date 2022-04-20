@@ -60,9 +60,15 @@ ls '''
     stage('display value') {
       steps {
         echo 'deployed successfully'
+        sh '''echo "$type"
+echo "$region"'''
       }
     }
 
+  }
+  environment {
+    region = 'dev'
+    type = 't2-micro'
   }
   post {
     success {
