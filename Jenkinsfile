@@ -51,5 +51,17 @@ ls '''
       }
     }
 
+    stage('confirm for deployment') {
+      steps {
+        input(message: 'Approve or Reject', ok: 'lets do it')
+      }
+    }
+
+    stage('display value') {
+      steps {
+        echo 'deployed successfully'
+      }
+    }
+
   }
 }
