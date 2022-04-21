@@ -92,4 +92,7 @@ ls '''
     }
 
   }
+  options {
+    timeout(time: 3, unit: 'DAYS')
+  }
 }
