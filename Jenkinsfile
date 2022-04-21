@@ -11,9 +11,20 @@ pipeline {
     }
 
     stage('build') {
-      steps {
-        sh '''cd my-app
+      parallel {
+        stage('build') {
+          steps {
+            sh '''cd my-app
 mvn clean compile'''
+          }
+        }
+
+        stage('options') {
+          steps {
+            sleep 30
+          }
+        }
+
       }
     }
 
