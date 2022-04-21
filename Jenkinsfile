@@ -2,19 +2,11 @@ pipeline {
   agent any
   stages {
     stage('jenkinsfile') {
-      parallel {
-        stage('jenkinsfile') {
-          steps {
-            sh 'echo $WORKSPACE'
-          }
-        }
-
-        stage('notification') {
-          steps {
-            emailext(subject: 'jenkins - build -start', body: 'build started', to: 'sheikmeeran.sj@gmail.com')
-          }
-        }
-
+      when {
+        branch 'master'
+      }
+      steps {
+        sh 'echo $WORKSPACE'
       }
     }
 
@@ -71,8 +63,6 @@ ls '''
     stage('display value') {
       steps {
         echo 'deployed successfully'
-        sh '''echo "$type"
-echo "$region"'''
       }
     }
 
