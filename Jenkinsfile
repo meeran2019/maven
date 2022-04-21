@@ -93,7 +93,7 @@ ls '''
 
   }
   options {
-    timeout(time: 30, unit: 'SECONDS')
+    timeout(time: 300, unit: 'SECONDS')
   }
   parameters {
     string(defaultValue: 'pipeline', name: 'type-s')
