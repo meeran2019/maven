@@ -1,0 +1,90 @@
+
+---------------------------------------------------------------------------------------------------------
+MAVEN: 
+---------------------------------------------------------------------------------------------------------
+
+Introduction: 
+
+    Maven can manage a project build, reporting and documentation from central piece of information.
+    It is based on POM (Project Object Module) file.
+
+
+Developer Activities: 
+
+    Write the code in IDE. 
+    Compile the code locally.
+    Test it.
+    Create the package. 
+    Deploy it in local application server. 
+    Push the working code to source code repository. 
+
+    If any 3rd party packages, requires to manually download and keep under source code library. 
+
+    Maven helps to download all 3rd party packages, build it, compile, test and packages.
+
+
+Installation: 
+
+        Require java to install and set the JAVA_HOME & PATH
+        Install the maven and update the M2_HOME
+
+
+---------------------------------------------------------------------------------------------------------
+BUILD MAVEN PROJECT: 
+---------------------------------------------------------------------------------------------------------
+
+    Archetype is maven plugin which is used to create a project structure as per template.
+
+    To create new project based on archetype: 
+
+            mvn archetype:generate
+                    artifactid 
+                    groupid
+                    
+
+POM.XML: 
+
+    It is project object module. 
+    GroupID     -   Project Group Name 
+    Artifact ID -   Project Name 
+    Version     -   Project Version 
+
+    Super POM: 
+        It is at high level and can be override at project level. 
+        mvn help:effective-pom
+
+
+BUILD LIFE CYCLE: 
+
+    Validate 
+    Compile 
+    Test 
+    Package 
+    Install
+    Deploy 
+
+    Clean   -   Pre clean, Clean, Post Clean 
+    Default 
+    Site    -   Used to generate documentation.
+
+
+MAVEN REPOSITORY:     
+
+    Local       -   Folder location on local machine. 
+    Remote      -   First check local, central and then remote repository. It is user defined repo. 
+    Central     -   Repository provided by maven community. If not found in local, search in central repo through internet. 
+
+
+MAVEN PLUGIN: 
+
+    In maven, everything is plugin. 
+
+    mvn plugin-name:goals 
+
+
+SNAPSHOTS: 
+
+    
+
+
+
