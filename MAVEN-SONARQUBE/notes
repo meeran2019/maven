@@ -84,7 +84,37 @@ MAVEN PLUGIN:
 
 SNAPSHOTS: 
 
-    
+    A large project contains multiple modules and multiple teams are working on modules.
+
+    For example: front-end.jar:1.0 team depends upon data-service.jar:1.0 team. If data-service change team frequently updates and need to inform front-end team. Front-end team requires to update their dependancy in pom.xml file. 
+
+    SNAPSHOT is special version that indicates current development copy. 
+    Unlike regular version, Maven checks for SNAPSHOT version in remote repository for every build. 
 
 
 
+---------------------------------------------------------------------------------------------------------
+4 WAYS TO UPLOAD JAR FILE TO JFROG:
+---------------------------------------------------------------------------------------------------------
+
+1. Upload Manually: 
+
+        Login to console and select the file to upload manually.
+
+
+2. RESTful API: 
+
+        $ curl -X PUT -u u:p -T Maven-Upload-1.1.jar "http://localhost:8081/artifactory/libs-release-local/Maven-Upload-1.1.jar"
+
+
+3. Deploy the Maven Artifactory Plugin: 
+
+        From jfrog artifactory, select "Quick setup" -> Deploy -> Generate script and place under POM.XML file. 
+
+
+4. Using CI Jenkins: 
+
+        Install "Artifactory Plugin"
+        Select "target release and snapshot" repository.
+
+        

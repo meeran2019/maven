@@ -18,6 +18,19 @@
     <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
 
+  <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>a0lqd448lpbue-artifactory-primary-0-releases</name>
+        <url>https://meeranartifactory.jfrog.io/artifactory/default-maven-virtual</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>a0lqd448lpbue-artifactory-primary-0-snapshots</name>
+        <url>https://meeranartifactory.jfrog.io/artifactory/default-maven-virtual</url>
+    </snapshotRepository>
+</distributionManagement>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
