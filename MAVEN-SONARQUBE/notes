@@ -118,3 +118,19 @@ SNAPSHOTS:
         Select "target release and snapshot" repository.
 
         
+---------------------------------------------------------------------------------------------------------
+SONARQUBE - JENKINS INTEGRATION: 
+---------------------------------------------------------------------------------------------------------
+
+1. Download the sonarqube, 
+
+            under /bin/sonar.sh start   -   start the service 
+
+2. In jenkins plugin, install the "sonarqube scanner",
+
+3. In sonarqube, administration/security - generate token. 
+
+4. In jenkins, update the global tool configuration and configure system. 
+
+
+
